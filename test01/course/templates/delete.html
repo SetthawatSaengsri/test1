@@ -1,0 +1,9 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <select name="dlt" id="">
+        {% for i in c %}
+        <option value="{{ i.id }}"> {{ i.id }} {{ i.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Delete</button>
+</form>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <form action="{% url 'search' %}" method="get">
+    <input type="search" name="search">
+    <button type="submit">ค้นหา</button>
+  </form>
+  {% for i in c %}
+  <tr>
+    <td><a href="{% url 'edit' i.id %}">{{ i.id }}</a></td>
+    <td>{{i.name}}</td>
+    <td>{{i.desc}}</td>
+  </tr>
+  {% endfor %}
+    
+</body>
+</html>
